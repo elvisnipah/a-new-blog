@@ -1,7 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog")
+
+console.log(allPosts)
 ---
 
 <Layout title="Elvis' blog" description="Home page of my blog">
 	<div class="text-center mt-8 border-2 border-black p-4 rounded-lg">Personal thoughts and whatever I'd like to share with the world.</div>
+	
+	<ul>
+		{allPosts.map((post) => (
+			<li>
+				{post.data.title}
+			</li>
+		))}
+	</ul>
 </Layout>
