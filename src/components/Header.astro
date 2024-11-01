@@ -3,13 +3,13 @@ import { Image } from "astro:assets"
 import neskLogoSmall from "../../src/assets/nesk-logo-small.png"
 ---
 
-<header class="flex justify-between items-center p-4">
+<header class="flex justify-between items-center p-4 w-full">
     <a href="/">
         <Image src={neskLogoSmall} class="w-16" alt="Logo of a book with the letters 'N.E.S.K.'" />
     </a>
 
-    <span class="font-bold">
+    <a href="/" class="border-2 border-raisin-black px-4 rounded-2xl hover:underline hover:border-flame hover:shadow-md hover:shadow-flame"><span class="font-bold">
         home
-    </span>
+    </span></a>
 
 </header>
