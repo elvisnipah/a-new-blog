@@ -18,12 +18,11 @@ console.log(sortPosts(allPosts))
 		<hr />
 		<ul class="mt-4">
 			{allPosts.map((post) => (
-				<li>
-					{post.data.title}
+				<li class="grid grid-cols-3">
+					<p class="text-gray-400 text-sm font-excalifont">{post.data.publishDate.toISOString().split('T')[0].replace(/-/g, "-")}</p>
+					<a href=`/posts/${post.slug}` class="col-span-2 underline underline-offset-4 decoration-yellow-green hover:text-yellow-green">{post.data.title}</a>
 				</li>
 			))}
 		</ul>
 	</div>
-	
-	
 </Layout>

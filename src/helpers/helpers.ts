@@ -4,8 +4,6 @@ export const sortPosts = (
   array: CollectionEntry<"blog">[]
 ): CollectionEntry<"blog">[] => {
   return array.sort(
-    (a, b) => a.data.publishDate.getTime() - b.data.publishDate.getTime()
+    (a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime()
   );
 };
-
-// export default { sortPosts };
