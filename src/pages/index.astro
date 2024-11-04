@@ -2,20 +2,28 @@
 import Layout from "../layouts/Layout.astro";
 
 import { getCollection } from "astro:content";
+import {sortPosts} from "../helpers/helpers"
 
 const allPosts = await getCollection("blog")
 
-console.log(allPosts)
+console.log(sortPosts(allPosts))
+
 ---
 
 <Layout title="Elvis' blog" description="Home page of my blog">
-	<div class="text-center mt-8 border-2 border-black p-4 rounded-lg">Personal thoughts and whatever I'd like to share with the world.</div>
+	<div class=" font-bold text-4xl text-flame">Personal thoughts and whatever I'd like to share.</div>
+
+	<div class="w-full mt-8">
+		<p class="font-bold text-crayola-blue">Recent</p>
+		<hr />
+		<ul class="mt-4">
+			{allPosts.map((post) => (
+				<li>
+					{post.data.title}
+				</li>
+			))}
+		</ul>
+	</div>
 	
-	<ul>
-		{allPosts.map((post) => (
-			<li>
-				{post.data.title}
-			</li>
-		))}
-	</ul>
+	
 </Layout>
