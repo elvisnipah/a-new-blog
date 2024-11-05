@@ -20,12 +20,12 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>{title} | Elvis' blog</title>
 	</head>
 	
 	<body class="flex items-center flex-col min-h-screen">
 		<Header />
-		<main class="p-4 flex flex-col items-center justify-center max-w-[768px]"><slot /></main>
+		<main class="p-4 pb-8 flex flex-col items-center justify-center max-w-[768px]"><slot /></main>
 		<Footer />
 	</body>
 </html>
