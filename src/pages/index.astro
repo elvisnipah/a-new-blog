@@ -5,9 +5,7 @@ import { getCollection } from "astro:content";
 import {sortPosts} from "../helpers/helpers"
 
 const allPosts = await getCollection("blog")
-
-console.log(sortPosts(allPosts))
-
+const sortedPosts = sortPosts(allPosts)
 ---
 
 <Layout title="Elvis' blog" description="Home page of my blog">
@@ -17,7 +15,7 @@ console.log(sortPosts(allPosts))
 		<p class="font-bold text-crayola-blue">Recent</p>
 		<hr />
 		<ul class="mt-4">
-			{allPosts.map((post) => (
+			{sortedPosts.map((post) => (
 				<li class="grid grid-cols-3 mb-4">
 					<p class="text-gray-400 text-sm">{post.data.publishDate.toISOString().split('T')[0].replace(/-/g, "-")}</p>
 					<a href=`/posts/${post.slug}` class="col-span-2 underline underline-offset-4 decoration-yellow-green hover:text-yellow-green">{post.data.title}</a>
