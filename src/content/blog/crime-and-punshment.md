@@ -5,7 +5,7 @@ description: "A review on the book 'Crime and Punishment' by Fyodor Dostoevsky"
 publishDate: "2024-12-08"
 tags: ["book"]
 ---
-# Book Review: Crime and Punishment - Fyodor Dostoevesky
+# Book Review: Crime and Punishment - Fyodor Dostoevsky
 ![Crime and Punishment book cover](../../assets/crime-and-punishment-35.jpg)
 
 Fyodor Dostoevsky’s *Crime and Punishment* is a dreary and sad book. The plot itself isn't necessarily a sad one, but its main character is, overwhelmingly so. There is little joy in this book, and any positive emotion is quickly sapped away by the melancholy of our protagonist, Raskolnikov. Raskolnikov is a student who, due to financial hardship, has to drop out of college temporarily. He conceives the idea that there are men on this earth who should not be forced to conform to the rules that apply to the average person. These men are destined for greatness, and the laws of society are merely suggestions to them. He believes he might just be one of these chosen few and plans a horrible crime to alleviate his poverty and, as a result, catapult himself into greatness. The problem with this plan is Raskolnikov’s own mental anguish. Even before committing the crime, he is tormented by his own sense of morality, and this only intensifies after the deed is done.
