@@ -1,0 +1,31 @@
+---
+import { getCollection, render, getEntry } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
+import Recommendations from "../../components/Recommendations.astro";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((post) => ({
+    params: { id: post.id },
+    props: {post},
+  }));
+}
+
+const { post } = Astro.props;
+
+const { Content } = await render(post)
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <a href="/" class="text-2xl self-start pb-4 hover:text-yellow-green">&lArr;</a
+  >
+  <Prose>
+    <Content />
+  </Prose>
+  {
+    post.data.recommendations && ( post.data.recommendations.length > 0 &&
+      <Recommendations posts={post.data.recommendations} />
+    )
+  }
+</Layout>
