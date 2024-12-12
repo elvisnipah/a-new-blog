@@ -1,15 +1,21 @@
 ---
-import { Image } from "astro:assets"
-import neskLogoSmall from "../../src/assets/nesk-logo-small.png"
+import { Image } from "astro:assets";
+import neskLogoSmall from "../../src/assets/nesk-logo-small.png";
 ---
 
 <header class="flex justify-between items-center p-4 w-full">
-    <a href="/">
-        <Image src={neskLogoSmall} class="w-16" alt="Logo of a book with the letters 'N.E.S.K.'" />
-    </a>
+  <a href="/">
+    <Image
+      src={neskLogoSmall}
+      width={64}
+      alt="Logo of a book with the letters 'N.E.S.K.'"
+    />
+  </a>
 
-    <a href="/" class="hover:underline hover:underline-offset-4 decoration-yellow-green font-excalifont font-bold">
-        home
-    </a>
-
+  <a
+    href="/"
+    class="hover:underline hover:underline-offset-4 decoration-yellow-green font-excalifont font-bold"
+  >
+    home
+  </a>
 </header>
