@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+const { posts } = Astro.props;
+
+const allPosts = await getCollection("blog");
+
+const recommended = allPosts.filter((post) => posts.includes(post.slug))
+---
+
+<div class="mt-8 flex flex-col justify-start w-full">
+    <hr />
+  <div class="font-bold text-2xl text-steel-blue mt-8">You can also check out...</div>
+  <ol class="flex flex-col gap-3 mt-3">
+    {
+      recommended.map((item) => {
+        return <li><a href={`/posts/${item.slug}`} class="text-dark-cyan hover:text-persian-rose underline underline-offset-4">{item.data.title}</a></li>;
+      })
+    }
+  </ol>
+</div>
