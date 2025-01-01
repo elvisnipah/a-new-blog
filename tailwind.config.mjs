@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       excalifont: ["Excalifont", "sans-serif"],
+      nunito: ["Nunito", "sans-serif"],
     },
     extend: {
       colors: {
