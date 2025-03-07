@@ -9,16 +9,16 @@ const sortedPosts = sortPosts(allPosts)
 ---
 
 <Layout title="Home" description="Home page of my blog">
-	<div class=" font-bold text-4xl text-flame">Personal thoughts and whatever I'd like to share.</div>
+	<div class=" font-bold text-4xl text-purple-700">Personal thoughts and whatever I'd like to share.</div>
 
 	<div class="w-full mt-8">
-		<p class="font-bold text-crayola-blue">Recent</p>
+		<p class="font-bold text-purple-500">Recent</p>
 		<hr class="border-raisin-black"/>
 		<ul class="mt-4">
 			{sortedPosts.map((post) => (
 				<li class="grid grid-cols-3 mb-4">
 					<p class="text-gray-400 text-sm">{post.data.publishDate.toISOString().split('T')[0].replace(/-/g, "-")}</p>
-					<a href={`/posts/${post.id}`} class="col-span-2 underline underline-offset-4 decoration-yellow-green hover:text-yellow-green">{post.data.title}</a>
+					<a href={`/posts/${post.id}`} class="col-span-2 underline underline-offset-4 decoration-purple-500 hover:text-blue-800">{post.data.title}</a>
 				</li>
 			))}
 		</ul>

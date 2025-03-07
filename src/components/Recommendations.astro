@@ -9,7 +9,7 @@ const recommended = allPosts.filter((post) => posts.includes(post.id));
 
 <div class="mt-8 flex flex-col justify-start w-full">
   <hr />
-  <div class="font-bold text-2xl text-steel-blue mt-8">
+  <div class="font-bold text-2xl text-purple-500 mt-8">
     You can also check out...
   </div>
   <ol class="flex flex-col gap-3 mt-3">
@@ -19,7 +19,7 @@ const recommended = allPosts.filter((post) => posts.includes(post.id));
           <li>
             <a
               href={`/posts/${item.id}`}
-              class="text-dark-cyan hover:text-persian-rose underline underline-offset-4"
+              class="text-raisin-black hover:text-gray-500 underline underline-offset-4"
             >
               {item.data.title}
             </a>

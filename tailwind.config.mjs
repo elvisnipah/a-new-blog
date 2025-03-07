@@ -5,6 +5,7 @@ export default {
     fontFamily: {
       excalifont: ["Excalifont", "sans-serif"],
       nunito: ["Nunito", "sans-serif"],
+      inter: ["Inter", "sans-serif"],
     },
     extend: {
       colors: {
