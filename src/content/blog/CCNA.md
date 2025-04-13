@@ -3,7 +3,7 @@ slug: ccna
 title: "CCNA"
 description: "How I obtained my CCNA certification"
 publishDate: "2024-07-27"
-tags: ["certification"]
+tags: ["certification", "networking"]
 ---
 
 # CCNA

@@ -12,7 +12,7 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="bg-gray-100 text-raisin-black min-h-screen">
+<html lang="en" class="bg-gray-50 text-gray-950 min-h-screen">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -22,10 +22,10 @@ const { title, description } = Astro.props;
     <title>{title} | Elvis' blog</title>
   </head>
 
-  <body class="flex items-center flex-col min-h-screen font-inter">
+  <body class="flex items-center flex-col min-h-screen font-fraunces">
     <Header />
     <main
-      class="p-4 pb-8 flex flex-col items-center justify-center max-w-[1080px] md:min-h-[70vh]"
+      class="p-4 pb-8 w-full flex flex-col items-center md:min-h-[70vh]"
     >
       <slot />
     </main>
